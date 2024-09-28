@@ -1,0 +1,31 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Human Survival Game</title>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <canvas id="canvas" class="rounded-md"></canvas>
+  </body>
+
+  <style>
+    .btn {
+      @apply py-2 px-4 rounded text-white font-semibold transition duration-300;
+    }
+  </style>
+
+  <script>
+    import { Game } from "../scripts/001-game.ts";
+
+    // Create and start the game
+    const game = new Game(400, 800);
+    game.start();
+
+  </script>
+</html>
