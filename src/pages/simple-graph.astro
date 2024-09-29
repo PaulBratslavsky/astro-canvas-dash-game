@@ -1,0 +1,31 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Graph Editor</title>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="relative">
+      <canvas id="canvas" class="rounded-md"></canvas>
+      <div id="overlay" class="absolute top-0 left-0 w-full h-full opacity-70 bg-cover bg-center"></div>
+    </div>
+  </body>
+
+  <style>
+    #overlay {
+      background-image: url('../assets/img/map.png');
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    import { Game } from "../scripts/003-game";
+    new Game();
+  </script>
+</html>
